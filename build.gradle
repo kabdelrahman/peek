@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'gradle-one-jar'
+
+version = '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+
+    compile 'org.zalando:straw:0.3.1'
+    compile 'com.eclipsesource.minimal-json:minimal-json:0.9.4'
+    compile 'com.github.ryenus:rop:1.1.1'
+    compile 'com.moandjiezana.toml:toml4j:0.7.1'
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+
+task peekJar(type: OneJar) {
+    dependsOn build
+    mainClass = 'org.zalando.peek.Main'
+    archiveName = 'peek.jar'
+}
+
+task bin {
+    dependsOn peekJar
+    copy {
+        from 'build/libs/'
+        into 'bin'
+        include '**/peek.jar'
+    }
+}

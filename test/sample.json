@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "occurred_at": "2016-10-26T14:47:26.553Z",
+    "eid": "dc638894-582d-4546-9a9c-a1e3ccabe987",
+    "event_type": "whisky-world.cart-service.v2",
+    "partition": "2",
+    "parent_eids": [
+      "27144a9f-a408-40da-bc7d-2df8dc37e0bc"
+    ],
+    "flow_id": "497wrQYJYVkJxaOfy0yHVYpx",
+    "received_at": "2016-10-26T14:47:26.568Z"
+  },
+  "data_op": "U",
+  "data": {
+    "version": 42,
+    "customer": {
+      "id": 94371
+    },
+    "items": [
+      {
+        "brand": "Auchroisk",
+        "years": 10,
+        "price": [
+          {
+            "value": 47.45,
+            "unit": "GBP"
+          },
+          {
+            "value": 53.95,
+            "unit": "EUR"
+          }
+        ],
+        "tags": [
+          "light",
+          "fresh"
+        ]
+      },
+      {
+        "brand": "Dalwhinnie",
+        "years": 15,
+        "price": [
+          {
+            "value": 36.95,
+            "unit": "GBP"
+          },
+          {
+            "value": 45.75,
+            "unit": "USD"
+          }
+        ],
+        "tags": [
+          "elegant",
+          "fruity",
+          "smooth"
+        ]
+      }
+    ]
+  }
+}
